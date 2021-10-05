@@ -139,3 +139,20 @@ def print_opening_message():
     print("**Welcome to the Hangman game!***")
     print("*********************************")
 
+    def upload_secret_word():
+    archive = open("list.txt", "r")
+    word = []
+
+    for line in archive:
+        line = line.strip()
+        word.append(line)
+
+    archive.close()
+
+    number = random.randrange(0, len(word))
+    secret_word = word[number].upper()
+    return secret_word
+
+
+if(__name__ == "__main__"):
+    game()
