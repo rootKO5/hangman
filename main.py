@@ -1,10 +1,8 @@
 import random
 
-
 def game():
     print_opening_message()
     secret_word = upload_secret_word()
-
     correct_letters = initializes_correct_letters(secret_word)
     print(correct_letters)
 
@@ -152,7 +150,6 @@ def print_opening_message():
     number = random.randrange(0, len(word))
     secret_word = word[number].upper()
     return secret_word
-
 
 if(__name__ == "__main__"):
     game()
